@@ -66,6 +66,7 @@ button{
     height: fit-content;
     background-color: rgba(255, 255, 255, 0.1);
     color: white;
+    border-radius: 2em;
     padding: 1em;
     margin: 1em;
 }
