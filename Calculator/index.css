@@ -63,7 +63,7 @@ main{
         text-align: right;
         padding: 5px;
 
-        font-family: "Source Code Pro";
+        font-family: monospace;
         font-size: 2em;
         font-style: italic;
         color: black;
