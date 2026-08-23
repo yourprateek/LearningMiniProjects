@@ -57,7 +57,7 @@ main{
         background-color: #456b4b;
         border: none;
         border-radius: 5px;
-        width: 8em;
+        width: 16rem;
         margin-inline: auto;
 
         text-align: right;
@@ -65,7 +65,6 @@ main{
 
         font-family: monospace;
         font-size: 2em;
-        font-style: italic;
         color: black;
 
         user-select: none;
