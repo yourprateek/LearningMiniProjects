@@ -67,13 +67,15 @@ main{
         font-size: 2em;
         color: black;
 
-        user-select: none;
-        -webkit-user-select: none;
-
         box-shadow: 
         inset -4px 4px 4px rgba(0, 0, 0, 0.5),
         inset 4px -4px 2px rgba(128, 128, 128, 0.3)
         ;
+        
+        cursor: default;
+        &:focus{
+            outline: none;
+        }
     }
     .keys{
         width: 15em;
@@ -137,12 +139,4 @@ main{
             }
         }
     }
-}
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type="number"]:focus{
-    outline: none;
 }
