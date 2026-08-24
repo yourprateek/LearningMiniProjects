@@ -5,13 +5,17 @@ const display = document.getElementById("inp");
 function appendDisplay(input) {
 
     if( ifOperator(display.value.slice(-1)) && ifOperator(input) ){
-        display.value += '';
+        deAppendDisplay();
+        display.value += input;
+    }else if(currNum(display.value) == '0'){
+        deAppendDisplay();                          //RECURSION BANANA PADEGA IDR
     }
+    else if( isDecimal(display.value) && input == '.') display.value += '';
     else display.value += input;
     display.scrollLeft = display.scrollWidth;
 }
 function clearDisplay(){
-    display.value = "";
+    display.value = "0";
     display.scrollLeft = display.scrollWidth;
 }
 function deAppendDisplay() {
@@ -28,6 +32,16 @@ function calculate(){
 }
 
 function ifOperator(char){
-    if(char == '+' || char == '-' || char == '/' || char == '*') return true;
+    if(char == '+' || char == '-' || char == '/' || char == '*' || char == '.') return true;
     else return false;
+}
+function currNum(expString){
+    const num = expString.split(/[-+/*]/);
+    return num.slice(-1)[0];
+}
+function isDecimal(expression){
+    const currentNum = currNum(expression);
+    
+    if(currentNum.split('.').length < 2 ) return false;
+    else return true; 
 }
