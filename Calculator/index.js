@@ -8,8 +8,13 @@ function appendDisplay(input) {
         deAppendDisplay();
         display.value += input;
     }else if(currNum(display.value) == '0'){
-        deAppendDisplay();                          //RECURSION BANANA PADEGA IDR
+        deAppendDisplay(); 
+        if(ifOperator(display.value.slice(-1)) && ifOperator(input)){
+            deAppendDisplay();
+        }
+        display.value += input;
     }
+
     else if( isDecimal(display.value) && input == '.') display.value += '';
     else display.value += input;
     display.scrollLeft = display.scrollWidth;
@@ -26,7 +31,10 @@ function calculate(){
     try {
         display.value = eval(display.value);
     } catch (error) {
-        display.value = "ERROR: 067";
+        display.value = "ERROR: 67";
+        setTimeout(() => {
+            clearDisplay();
+        }, 800);
     }
     display.scrollLeft = display.scrollWidth;
 }
