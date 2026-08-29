@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <meta name="description" content="A simple Game of Rock Paper Scissors">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>ROCK | PAPER | SCISSORS</h1>
+
+    <main>
+        <div class="current_screen" id="start_screen">
+        <button id="start-btn" onclick="startGame()">Start Game</button>
+    </div>
+
+    <div class="" id="game_screen">
+
+        <div id="main">
+            <div id="left">
+                <h2>Player Choice</h2>
+                <button class="choice" id="playerDisplay"></button>
+            </div>
+            <div id="right">
+                <h2>Computer Choice</h2>
+                <button class="choice" id="computerDisplay"></button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div id="buttons">
+            <button class="options" id="rock" onclick="playGame('rock')">✊</button>
+            <button class="options" id="paper" onclick="playGame('paper')">🖐️</button>
+            <button class="options" id="scissors" onclick="playGame('scissors')">✌️</button>
+        </div>
+
+        <p id="instance_result"></p>
+
+        <button id="end-btn" onclick="endGame()">End Game</button>
+    </div>
+
+    <div class="" id="result_screen">
+        <h2>You won the game!</h2>
+        <p> Score: <span>0</span>/<span>0</span></p>
+        <button id="restart-btn" onclick="restartGame()">Restart</button>
+    </div>
+    </main>
+  
+<script src="index.js"></script>    
+</body>
+</html>

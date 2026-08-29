@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+    color: whitesmoke;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+h1, h2, p{
+    text-align: center;
+}
+h1{
+    margin-top: 1rem;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    background-image: radial-gradient(at center, rgb(99, 99, 255), rgb(5, 5, 61));
+}
+#game{
+    border-radius: 30px;
+    border: 3px solid #A8A8A8;
+    padding: 2rem;
+}
+main{
+    margin: auto;
+}
+#main{
+    display: flex;
+    justify-content: space-between;
+}
+#buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.options{
+    margin-top: 1rem;
+    font-size: 5rem;
+    border-radius: 20px;
+    border: 3px solid #FFDF64;
+    border-width: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+
+    transition: scale 100ms ease;
+    &:active{
+        background-color: rgba(255, 255, 255, 0.1);
+        scale: 0.98;
+    }
+}
+#left, #right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 5em;
+}
+.choice{
+    font-size: 5rem;
+    border: transparent;
+    background-color: transparent;
+}
+p{
+    font-size: 3rem;
+    margin: 1rem 0;
+    text-align: center;
+    transform: rotateZ('45deg');
+}
+#start-btn{
+    font-size: 5.5rem;
+    border: 3px solid #A8A8A8;
+    border-radius: 20px;    
+    padding: 10px;
+    background-color: rgba(16, 16, 123, 0.418);
+    cursor: pointer;
+
+    transition: all 100ms ease;
+    &:hover{
+        color: white;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.221);
+    }
+    &:active{
+        background-color: rgba(255, 255, 255, 0.1);
+        scale: 0.98;
+    }
+}
+#end-btn, #restart-btn{
+    display: block;
+    font-size: 2rem;
+    margin-inline: auto;
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgba(16, 16, 123, 0.418);
+    cursor: pointer;
+
+    transition: scale 100ms ease;
+    &:active{
+        scale: 0.95;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+#displayScore{
+    border-radius: 30px;
+    border: 3px solid #A8A8A8;
+    padding: 2rem;
+}
+.hide{
+    display: none;
+}
+#game_screen, #result_screen{
+    border: 3px solid #A8A8A8;
+    padding: 2rem;
+    border-radius: 2rem;
+}

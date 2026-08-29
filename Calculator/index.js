@@ -7,7 +7,7 @@ function appendDisplay(input) {
     if( ifOperator(display.value.slice(-1)) && ifOperator(input) ){
         deAppendDisplay();
         display.value += input;
-    }else if(currNum(display.value) == '0'){
+    }else if(currNum(display.value) == '0' && input != '.'){
         deAppendDisplay(); 
         if(ifOperator(display.value.slice(-1)) && ifOperator(input)){
             deAppendDisplay();
