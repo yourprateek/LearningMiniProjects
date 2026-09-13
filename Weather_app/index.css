@@ -1,6 +1,199 @@
-#map{
-    height: 1em;
+:root {
+    --text-color: black;
 }
-.errortext{
-    
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+h1 {
+    text-align: center;
+    padding: 1rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F0F0F0;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#form {
+    display: flex;
+    align-items: center;
+    margin: 12px;
+
+    #inputCity {
+        font-size: 2rem;
+        width: 300px;
+        padding: 4px 24px;
+        border: none;
+        cursor: pointer;
+        background-color: hsl(0, 0%, 94%);
+        border-radius: 100px;
+        text-align: center;
+        caret-color: transparent;
+
+        box-shadow:
+            -2px -2px 4px white,
+            2px 2px 4px hsl(0, 0%, 80%);
+
+        &:hover {
+            background-color: hsl(0, 0%, 92%);
+            box-shadow:
+                -2px -2px 4px white,
+                2px 2px 4px hsl(0, 0%, 70%);
+        }
+
+        &:focus {
+            outline: none;
+            background-color: hsl(0, 0%, 97%);
+            box-shadow:
+                -2px -2px 4px hsl(0, 0%, 88%),
+                2px 2px 4px white;
+        }
+    }
+
+    #map {
+        height: 2rem;
+        margin: 4px;
+    }
+}
+
+button[type="submit"] {
+        font-size: 1.5rem;
+        padding: 8px 24px;
+        cursor: pointer;
+        border: none;
+        border-radius: 100px;
+        box-shadow:
+            -2px -2px 4px white,
+            2px 2px 4px hsl(0, 0%, 80%);
+
+        &:hover {
+            background-color: hsl(0, 0%, 92%);
+            box-shadow:
+                -2px -2px 4px white,
+                2px 2px 4px hsl(0, 0%, 70%);
+        }
+
+        &:focus{
+            outline: none;
+        }
+
+        &:active {
+            background-color: hsl(0, 0%, 97%);
+            box-shadow:
+                -2px -2px 4px hsl(0, 0%, 88%),
+                2px 2px 4px white;
+        }
+    }
+
+.errortext {
+    background-color: rgba(255, 0, 0, 0.153);
+    border: none;
+    border-radius: 100px;
+    padding: 4px 12px;
+    box-shadow:
+        -2px -2px 4px white,
+        2px 2px 4px hsl(0, 0%, 75%);
+}
+
+.displayweather {
+    display: none;
+    padding: 1rem;
+    border-radius: 2rem;
+    box-shadow:
+        -4px -4px 8px white,
+        4px 4px 8px hsl(0, 0%, 80%);
+
+}
+
+body .displayweather.active{
+    display: block;
+}
+
+.main {
+    width: clamp(200px, 80vw, 400px);
+    height: clamp(150px, 50vw, 250px);
+    padding: 1rem;
+    border-radius: 1rem;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 0 0 4px black;
+
+    box-shadow:
+        inset -4px -4px 8px hsl(0, 0%, 50%),
+        inset 4px 4px 8px hsl(0, 0%, 10%);
+
+    position: relative;
+
+    & > p{
+        padding: 1rem;
+    }
+    .time{
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1rem;
+    }
+    .right-bottom{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 1rem;
+        .description{
+            font-size: 1.2rem;
+        }
+    }
+    .temp{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+}
+@media(max-width:400px){
+    .main .temp{
+        font-size: 2rem;
+    }
+    .main .right-bottom .description{
+        font-size: 1rem;
+    }
+}
+.others{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 1rem 0 0 0;
+    .values{
+        padding: 8px;
+        box-shadow:
+        -4px -4px 8px white,
+        4px 4px 8px hsl(0, 0%, 80%);
+        border-radius: 4px;
+
+        .labels{
+            color: gray;
+            font-size: 12px;
+            text-align: center;
+        }
+        .value{
+            text-align: center;
+        }
+    }
 }

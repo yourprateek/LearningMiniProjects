@@ -14,13 +14,42 @@
     <h1>Weather App</h1>
 
     <form class="weatherform">
-        <img src="map.svg" alt="location-city" id="map">
-        <input type="text" placeholder="Enter City" class="inputCity">
+        <div id="form">
+            <label for="inputCity"><img src="map.svg" alt="location-city" id="map"></label>
+            <input type="text" placeholder="Enter City" id="inputCity">
+        </div>
         <button type="submit">Get Weather</button>
     </form>
 
     <div class="displayweather">
+        <div class="main">
+            <p class="time"> 12:00 PM</p>
 
+            <div class="right-bottom">
+                <p class="description"></p>
+                <p class="feelsLike"></p>
+            </div>
+
+            <p class="temp"></p>
+        </div>
+        <div class="others">
+            <div class="values">
+                <p class="labels">Wind</p>
+                <p class="value"></p>
+            </div>
+            <div class="values">
+                <p class="labels">Humidity</p>
+                <p class="value"></p>
+            </div>
+            <div class="values" style="border-bottom-left-radius: 1rem;">
+                <p class="labels">Visibility</p>
+                <p class="value"></p>
+            </div>
+            <div class="values" style="border-bottom-right-radius: 1rem;">
+                <p class="labels">Pressure</p>
+                <p class="value"></p>
+            </div>
+        </div>
     </div>
 <script src="index.js"></script>    
 </body>
